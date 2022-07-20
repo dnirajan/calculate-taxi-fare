@@ -1,1 +1,5 @@
-web: gunicorn taxi_fare_calculator.wsgi
+web: waitress-serve --port=$PORT taxi_fare_calculator.wsgi:application
+
+
+
+

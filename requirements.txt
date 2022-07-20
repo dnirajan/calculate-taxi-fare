@@ -23,7 +23,6 @@ sqlparse==0.4.2
 stack-data==0.3.0
 toml==0.10.2
 traitlets==5.3.0
+waitress==2.1.2
 wcwidth==0.2.5
 whitenoise==6.2.0
-psycopg2
-gunicorn
