@@ -1,1 +1,1 @@
-web: gunicorn taxi-fare-calculate.wsgi
+web: gunicorn taxi_fare_calculator.wsgi

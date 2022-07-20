@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-mspxkb9-c7&*x-bedh2k48jmi&i_m_!ron%c_#f3n%e-o@hhw-
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'taxi-fare-calculate.herokuapp.com',
+    'calculate-fare.herokuapp.com',
     'localhost',
     '127.0.0.1',
 ]
