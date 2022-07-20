@@ -1,0 +1,42 @@
+{% load crispy_forms_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row d-flex justify-content-center p-5">
+        <div class="col-6">
+            <div class="card">
+              <div class="card-header">
+                <h4>Price Calculator</h4>
+              </div>
+            <div class="card-body">
+                <h5 class="card-title p-3">Fill out the following to calculate</h5>
+                <form method="POST" enctype="multipart/form-data">
+                    <!-- Security token -->
+                    {% csrf_token %}
+                    <!-- Using the formset -->
+                    <p>User 24 hour format.</p>
+                    {{ form | crispy }}
+                    <input type="submit" value="Calculate" class="mt-2">
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center mb-3">
+        <div class="col-5">
+           <div class="card">
+               <div class="card-body">
+                   <p>Time: {{ time }}</p>
+                   <p>Distance: {{ distance }}</p>
+                   <h5> Your final price is: Rs.{{ result }} </h5>
+               </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
