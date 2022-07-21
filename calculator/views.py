@@ -6,10 +6,6 @@ from calculator.models import Fare, Price, Time
 from taxi_fare_calculator.forms import FareForm
 
 
-class CalculatorView(TemplateView):
-    template_name = 'home.html'
-
-
 class FareCreate(TemplateView):
     model = Fare
     template_name = 'calculate.html'
